@@ -613,3 +613,71 @@ h1 em, h2 em { color: var(--red); font-style: normal; }
   #capacitacao .training-join .section-actions { grid-area: acao; }
   #capacitacao .training-steps { grid-area: passos; gap: 2rem; }
 }
+
+/* Empregabilidade e contato */
+#empregabilidade, #contato {
+  display: block;
+  min-block-size: 0;
+  padding-block: clamp(4.5rem, 8vw, 7.5rem);
+}
+#empregabilidade .employment-heading { margin-bottom: 2.5rem; }
+#empregabilidade .employment-heading > p { max-width: 30rem; color: var(--muted); font-size: .9375rem; }
+#empregabilidade .employment-grid { display: grid; gap: 1rem; }
+#empregabilidade .employment-card {
+  min-width: 0;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid #e2d7ca;
+  border-radius: 1.125rem;
+  background: var(--paper);
+}
+#empregabilidade .employment-card-number {
+  display: block;
+  margin-bottom: 1.25rem;
+  color: #c53a2e70;
+  font: 600 2.25rem/1 var(--display);
+}
+#empregabilidade .employment-card-label, #contato .contact-panel-label {
+  margin-bottom: .65rem;
+  color: #825800;
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+#empregabilidade .employment-card h3 { margin-bottom: .75rem; color: var(--navy); }
+#empregabilidade .employment-card > p:not(.employment-card-label) { color: var(--muted); font-size: .875rem; line-height: 1.7; }
+#empregabilidade .employment-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  margin-top: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 1.25rem;
+  background: var(--navy);
+  color: white;
+}
+#empregabilidade .employment-cta h3 { font-size: clamp(1.375rem, 2.6vw, 1.75rem); }
+#empregabilidade .employment-cta p { max-width: 37rem; margin-top: .5rem; color: #c9d3df; font-size: .875rem; }
+#empregabilidade .employment-cta :focus-visible { outline-color: var(--gold); }
+#contato .contact-grid { display: grid; align-items: center; gap: 2rem 4rem; }
+#contato h2 em { color: var(--gold); }
+#contato .contact-copy { max-width: 35rem; margin-top: 1.5rem; color: #d3dbe5; }
+#contato .contact-panel {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid #8394a966;
+  border-radius: 1.25rem;
+  background: #102238;
+}
+#contato .contact-panel-label { color: var(--gold); }
+#contato .contact-panel h3 { font-size: clamp(1.375rem, 2.6vw, 1.75rem); }
+#contato .contact-panel ul { display: grid; gap: .8rem; margin: 1.25rem 0 0; padding: 0; list-style: none; color: #d3dbe5; font-size: .875rem; }
+#contato .contact-panel li { display: flex; align-items: baseline; gap: .65rem; }
+#contato .contact-panel li::before { flex: 0 0 .4rem; width: .4rem; height: .4rem; border-radius: 50%; background: var(--gold); content: ""; }
+@media (width >= 48rem) {
+  #empregabilidade .employment-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+}
+@media (width >= 64rem) {
+  #contato .contact-grid { grid-template-columns: minmax(0, 1.15fr) minmax(20rem, .85fr); }
+}
